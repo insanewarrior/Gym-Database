@@ -1,0 +1,17 @@
+﻿<Window x:Class="GymStaffDataBaseApp.Additing_Change_Post_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Сменить должность" Height="207" Width="338" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Closing="Additing_Change_Post_Window_Closing">
+    <Grid Name="Change_Post_Grid" Background="#FFD3D316">
+        <Label Name="Emploee_Label" Content="Работник" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="26,20,0,0" Width="143" FontFamily="Arial" FontSize="16" Height="30"/>
+        <Label Name="New_Post_Label" Content="Новая должность" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="26,55,0,0" Width="143" FontFamily="Arial" FontSize="16" Height="30"/>
+        <Label Name="Document_Label" Content="Документ" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="26,90,0,0" Width="143" FontFamily="Arial" FontSize="16" Height="30"/>
+
+        <ComboBox Name="Employee_ComboBox" HorizontalAlignment="Left" Margin="174,20,0,0" VerticalAlignment="Top" Width="137" Height="30" FontFamily="Arial" FontSize="16" TabIndex="1"/>
+        <ComboBox Name="New_Post_ComboBox" HorizontalAlignment="Left" Margin="174,55,0,0" VerticalAlignment="Top" Width="137" Height="30" FontFamily="Arial" FontSize="16" TabIndex="2"/>
+        <ComboBox Name="Document_ComboBox" HorizontalAlignment="Left" Margin="174,90,0,0" VerticalAlignment="Top" Width="137" Height="30" FontFamily="Arial" FontSize="16" TabIndex="3"/>
+
+        <Button Name="Add_Button" Content="ОК" HorizontalAlignment="Left" Margin="156,136,0,0" VerticalAlignment="Top" Width="75" Height="22" Click="Add_Button_Click" FontFamily="Arial" FontSize="16" TabIndex="4"/>
+        <Button Name="Cancel_Button" Content="Отмена" HorizontalAlignment="Left" Margin="236,136,0,0" VerticalAlignment="Top" Width="75" Height="22" Click="Cancel_Button_Click" FontFamily="Arial" FontSize="16" TabIndex="5"/>
+    </Grid>
+</Window>

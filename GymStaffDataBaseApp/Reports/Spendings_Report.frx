@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" TextQuality="Regular" ReportInfo.Name="Simple List" ReportInfo.Author="Fast Reports Inc" ReportInfo.Description="Demonstrates simple list report. To create it:&#13;&#10;- go to &quot;Data&quot; menu and select &quot;Choose Report Data...&quot; item to select datasource;&#13;&#10;- go to &quot;Report|Configure Bands...&quot; menu to create the band structure;&#13;&#10;- return to the report page, doubleclick the data band to show its editor;&#13;&#10;- choose the datasource;&#13;&#10;- drag data from the Data Dictionary window to the band." ReportInfo.Created="01/17/2008 03:05:57" ReportInfo.Modified="06/04/2016 01:53:03" ReportInfo.CreatorVersion="2016.2.20.0">
+  <Dictionary>
+    <MsSqlDataConnection Name="Connection_Gym_Staff_DataBase" ConnectionString="rijcmlqjSfgSqWTaGZp1VGjtc0gyIW7Tty4Ttinr/QHWWxa6mu1VgKFshaplDeWX0C4cMI03wjK3SriwJvc1EnaoD3jZoZLQphhzdZsatR6Ovpg0pDmmnVDQdx+T0Z7yDpXjlZ+GC2jcrib7f0HCeA6SM3qds0D8YqMK4XEsGNe5KosidswdTJnDrT+LoMScr3Be9ol9L6ZpeQQOs2sztwfdmLDLw==">
+      <TableDataSource Name="View_Working_Employees" DataType="System.Int32" Enabled="true" TableName="View_Working_Employees">
+        <Column Name="id_Работник" DataType="System.Int32"/>
+        <Column Name="Имя" DataType="System.String"/>
+        <Column Name="Фамилия" DataType="System.String"/>
+        <Column Name="Отчество" DataType="System.String"/>
+        <Column Name="Адрес" DataType="System.String"/>
+        <Column Name="Телефон" DataType="System.String"/>
+        <Column Name="Идентификационный_код" DataType="System.String"/>
+        <Column Name="Номер_паспорта" DataType="System.String"/>
+        <Column Name="Обязанность" DataType="System.String"/>
+        <Column Name="Дата_начала" DataType="System.DateTime"/>
+      </TableDataSource>
+      <TableDataSource Name="View_Absent_Employees" DataType="System.Int32" Enabled="true" TableName="View_Absent_Employees">
+        <Column Name="id_Работник" DataType="System.Int32"/>
+        <Column Name="Имя" DataType="System.String"/>
+        <Column Name="Фамилия" DataType="System.String"/>
+        <Column Name="Отчество" DataType="System.String"/>
+        <Column Name="Адрес" DataType="System.String"/>
+        <Column Name="Телефон" DataType="System.String"/>
+        <Column Name="Обязанность" DataType="System.String"/>
+        <Column Name="id_Отсутствующий_работник" DataType="System.Int32"/>
+        <Column Name="Дата_начала" DataType="System.DateTime"/>
+      </TableDataSource>
+      <TableDataSource Name="View_Free_Posts" DataType="System.Int32" Enabled="true" TableName="View_Free_Posts">
+        <Column Name="id_Должность" DataType="System.Int32"/>
+        <Column Name="Обязанность" DataType="System.String"/>
+        <Column Name="Зарплата" DataType="System.String"/>
+      </TableDataSource>
+      <TableDataSource Name="View_Premium" DataType="System.Int32" Enabled="true" TableName="View_Premium">
+        <Column Name="Имя" DataType="System.String"/>
+        <Column Name="Фамилия" DataType="System.String"/>
+        <Column Name="Отчество" DataType="System.String"/>
+        <Column Name="Обязанность" DataType="System.String"/>
+        <Column Name="Размер" DataType="System.String"/>
+        <Column Name="Дата" DataType="System.DateTime"/>
+        <Column Name="Причина" DataType="System.String"/>
+        <Column Name="id_Работник" DataType="System.Int32"/>
+      </TableDataSource>
+      <TableDataSource Name="View_Spendings_On_Working_Employees" DataType="System.Int32" Enabled="true" TableName="View_Spendings_On_Working_Employees">
+        <Column Name="id_Работник" DataType="System.Int32"/>
+        <Column Name="Имя" DataType="System.String"/>
+        <Column Name="Фамилия" DataType="System.String"/>
+        <Column Name="Отчество" DataType="System.String"/>
+        <Column Name="Обязанность" DataType="System.String"/>
+        <Column Name="Дата_начала" DataType="System.DateTime"/>
+        <Column Name="Размер_выплаченной_зарплаты" DataType="System.Int32"/>
+      </TableDataSource>
+    </MsSqlDataConnection>
+  </Dictionary>
+  <ReportPage Name="Page1">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="75.6" CanGrow="true">
+      <TextObject Name="Text1" Top="47.25" Width="718.2" Height="28.35" Text="Затраты на зарплаты работникам спорт зала &quot;IRON TEMPLE&quot;" HorzAlign="Center" VertAlign="Center" Font="Tahoma, 14pt, style=Bold"/>
+      <TextObject Name="Text11" Width="718.2" Height="28.35" Anchor="Top, Left, Right" Fill.Color="WhiteSmoke" CanGrow="true" CanShrink="true" Text="[Report.ReportInfo.Description]&#13;&#10;" Padding="4, 4, 4, 4" Font="Tahoma, 8pt"/>
+      <ChildBand Name="Child2" Top="79.6" Width="718.2" Height="18.9"/>
+    </ReportTitleBand>
+    <DataBand Name="Data1" Top="102.5" Width="718.2" Height="115.29" Border.Lines="All" Border.Color="Maroon" CanGrow="true" DataSource="View_Spendings_On_Working_Employees">
+      <TextObject Name="Text3" Left="9.45" Top="66.15" Width="103.95" Height="18.9" Text="Дата начала :" VertAlign="Center" Font="Tahoma, 9pt, style=Bold"/>
+      <TextObject Name="Text4" Left="217.35" Top="66.15" Width="453.6" Height="18.9" Text="[View_Spendings_On_Working_Employees.Дата_начала]" Format="Date" Format.Format="D" VertAlign="Center" Font="Tahoma, 9pt"/>
+      <TextObject Name="Text13" Left="217.35" Top="47.25" Width="453.6" Height="18.9" Text="[View_Spendings_On_Working_Employees.Обязанность]" Format="Date" Format.Format="d" VertAlign="Center" Font="Tahoma, 9pt"/>
+      <TextObject Name="Text14" Left="217.35" Top="85.05" Width="453.6" Height="18.9" Text="[View_Spendings_On_Working_Employees.Размер_выплаченной_зарплаты]" VertAlign="Center" Font="Tahoma, 9pt"/>
+      <TextObject Name="Text15" Left="9.45" Top="47.25" Width="103.95" Height="18.9" Text="Обязанность :" VertAlign="Center" Font="Tahoma, 9pt, style=Bold"/>
+      <TextObject Name="Text16" Left="9.45" Top="85.05" Width="198.45" Height="18.9" Text="Размер выплат по зарплате :" VertAlign="Center" Font="Tahoma, 9pt, style=Bold"/>
+      <TextObject Name="Text2" Width="718.2" Height="37.8" Border.Lines="All" Border.Color="Maroon" Fill="LinearGradient" Fill.StartColor="Black" Fill.EndColor="Gray" Fill.Angle="90" Fill.Focus="0.52" Fill.Contrast="1" Text="[View_Spendings_On_Working_Employees.Фамилия]  [View_Spendings_On_Working_Employees.Имя]  [View_Spendings_On_Working_Employees.Отчество]" Padding="10, 0, 2, 0" VertAlign="Center" Font="Tahoma, 12pt, style=Bold" TextFill.Color="White"/>
+      <ChildBand Name="Child1" Top="221.79" Width="718.2" Height="18.9"/>
+      <Sort>
+        <Sort Expression="[View_Spendings_On_Working_Employees.id_Работник]"/>
+      </Sort>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="244.69" Width="718.2" Height="28.35" Fill.Color="WhiteSmoke" CanGrow="true">
+      <TextObject Name="Text10" Left="614.25" Width="94.5" Height="28.35" Text="[PageN]" HorzAlign="Right" VertAlign="Center" Font="Tahoma, 8pt"/>
+    </PageFooterBand>
+  </ReportPage>
+</Report>

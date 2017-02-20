@@ -1,0 +1,10 @@
+﻿<Window x:Class="GymStaffDataBaseApp.Additing_Administrator_Report_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Отчет администратора" Height="195.667" Width="219" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Closing="Additing_Administrator_Report_Window_Closing">
+    <Grid Name="Supervisor_Report_Grid" Background="#FFCB0F0F">
+        <Button Name="Premium_FastReport_Button" Content="  Премии&#xD;&#xA;FastReport" HorizontalAlignment="Left" Margin="19,33,0,0" VerticalAlignment="Top" Width="168" Height="37"  FontFamily="Arial" Click="Premiums_Button_Click" TabIndex="1"/>
+        <Button Name="Spendings_FastReport_Button" Content="Затраты на зарплаты&#xA;         FastReport" HorizontalAlignment="Left" Margin="19,75,0,0" VerticalAlignment="Top" Width="168" Height="37"  FontFamily="Arial" Click="Spendings_FastReport_Button_Click" TabIndex="2"/>
+        <Button Name="Cancel_Button" Content="Отмена" HorizontalAlignment="Left" Margin="112,123,0,0" VerticalAlignment="Top" Width="75" Height="22" Click="Cancel_Button_Click" FontFamily="Arial" FontSize="16" TabIndex="3"/>
+    </Grid>
+</Window>

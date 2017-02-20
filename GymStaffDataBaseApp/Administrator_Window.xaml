@@ -1,0 +1,32 @@
+﻿<Window x:Class="GymStaffDataBaseApp.Administrator_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Администратор" Height="269" Width="440" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Closing="Administrator_Window_Closing">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="Red" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <ComboBox Name="Output_ComboBox" HorizontalAlignment="Left" Margin="30,13,0,0" VerticalAlignment="Top" Width="286" FontFamily="Arial" Height="22" TabIndex="7">
+            <ComboBoxItem Content="Кандидаты"/>
+            <ComboBoxItem Content="Документы"/>
+            <ComboBoxItem Content="Собеседования"/>
+            <ComboBoxItem Content="Работники"/>
+            <ComboBoxItem Content="Работники на постах"/>
+            <ComboBoxItem Content="Отсутствующие работники"/>
+            <ComboBoxItem Content="Должности"/>
+            <ComboBoxItem Content="Премии"/>
+            <ComboBoxItem Content="Графики работы"/>
+            <ComboBoxItem Content="Рабочие места"/>
+        </ComboBox>
+
+        <Button Name="Manager_Button" Content="       Вход в базу&#xD;&#xA;в роли МЕНЕДЖЕРА" HorizontalAlignment="Left" Margin="135,51,0,0" VerticalAlignment="Top" Width="168" Height="37"  FontFamily="Arial" TabIndex="1" Click="Manager_Button_Click"/>
+        <Button Name="Supervisor_Button" Content="          Вход в базу&#xD;&#xA;в роли СУПЕРВАЙЗЕРА" HorizontalAlignment="Left" Margin="135,93,0,0" VerticalAlignment="Top" Width="168" Height="37" FontFamily="Arial" TabIndex="2" Click="Supervisor_Button_Click"/>
+        <Button Name="Admin_Reports_Button" Content="Отчет" HorizontalAlignment="Left" Margin="135,135,0,0" VerticalAlignment="Top" Width="168" Height="37" FontFamily="Arial" TabIndex="3" Click="Admin_Reports_Button_Click"/>
+
+        <Button Name="Output_Button" Content="Вывод" HorizontalAlignment="Left" Margin="332,13,0,0" VerticalAlignment="Top" Width="75" Height="22" Click="Output_Button_Click" FontFamily="Arial" FontSize="16" TabIndex="8"/>
+        <Button Name="Exit_Button" Content="Выход" HorizontalAlignment="Left" Margin="332,194,0,0" VerticalAlignment="Top" Width="75" Height="22" Click="Exit_Button_Click" FontFamily="Arial" FontSize="16" TabIndex="9"/>
+    </Grid>
+</Window>

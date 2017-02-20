@@ -1,0 +1,15 @@
+﻿<Window x:Class="GymStaffDataBaseApp.Output_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Output Data Grid" Height="304" Width="629" MinHeight="304" MinWidth="629" WindowStartupLocation="CenterScreen" Closing="Output_Window_Closing">
+    <Grid Name="Output_Grid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <ComboBox Name="Filter_ComboBox" HorizontalAlignment="Left" Margin="94,0,0,16" VerticalAlignment="Bottom" Width="286" FontFamily="Arial" Height="22" TabIndex="7"/>
+        <DataGrid Name="Data_Grid" IsTextSearchEnabled="True" CanUserReorderColumns="False" CanUserResizeColumns="False" IsReadOnly="True" Loaded="Grid_Loaded" TabIndex="1" Margin="0,0,0,55"/>
+        <Label Name="Filter_Label" Content="Фильтр" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="19,0,0,10" Width="70" FontFamily="Arial" FontSize="16" Height="30"/>
+        <TextBox Name="Second_Name_Filter_TextBox" HorizontalAlignment="Left" Margin="385,0,0,10" VerticalAlignment="Bottom" Width="214" Height="30" FontFamily="Arial" FontSize="16" TabIndex="2" TextChanged="Text_Changed"/>
+    </Grid>
+</Window>

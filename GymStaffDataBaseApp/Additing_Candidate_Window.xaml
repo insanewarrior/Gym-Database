@@ -1,0 +1,27 @@
+﻿<Window x:Class="GymStaffDataBaseApp.Additing_Candidate_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Кандидат" Height="354.921" Width="301.493" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Closing="Additing_Candidate_Window_Closing">
+    <Grid Name="Candidate_Grid" Background="#FF1277B2">
+        <Label Content="Фамилия" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,24,0,0" Width="93" FontSize="16" Height="30" Foreground="White"/>
+        <Label Content="Имя" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,59,0,0" Width="93" FontFamily="Arial" FontSize="16" Height="30" Foreground="White"/>
+        <Label Content="Отчество" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,95,0,0" Width="93" FontFamily="Arial" FontSize="16" Height="30" Foreground="White"/>
+        <Label Content="Адрес" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,131,0,0" Width="93" FontFamily="Arial" FontSize="16" Height="30" Foreground="White"/>
+        <Label Content="Телефон" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,167,0,0" Width="93" FontFamily="Arial" FontSize="16" Height="30" Foreground="White"/>
+        <Label Content="ИДН" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,203,0,0" Width="93" FontFamily="Arial" FontSize="16" Height="30" Foreground="White"/>
+        <Label Content="Паспорт" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,240,0,0" Width="93" FontFamily="Arial" FontSize="16" Height="30" Foreground="White"/>
+
+        <TextBox Name="Second_Name_TextBox" HorizontalAlignment="Left" Height="30" Margin="118,24,0,0" VerticalAlignment="Top" Width="155" FontFamily="Arial" FontSize="16" MaxLength="100" MaxLines="1" TabIndex="1"/>
+        <TextBox Name="First_Name_TextBox" HorizontalAlignment="Left" Height="30" Margin="118,59,0,0"  VerticalAlignment="Top" Width="155" FontFamily="Arial" FontSize="16" MaxLength="100" MaxLines="1" TabIndex="2"/>
+        <TextBox Name="Middle_Name_TextBox" HorizontalAlignment="Left" Height="30" Margin="118,95,0,0"  VerticalAlignment="Top" Width="155" FontFamily="Arial" FontSize="16" MaxLength="100" MaxLines="1"  TabIndex="3"/>
+        <TextBox Name="Adress_TextBox" HorizontalAlignment="Left" Height="30" Margin="118,131,0,0"  VerticalAlignment="Top" Width="155" FontFamily="Arial" FontSize="16" MaxLength="100" MaxLines="1" TabIndex="4"/>
+        <TextBox Name="Phone_TextBox" HorizontalAlignment="Left" Height="30" Margin="118,167,0,0"  VerticalAlignment="Top" Width="155" FontFamily="Arial" FontSize="16" MaxLength="12" MaxLines="1" TabIndex="5"/>
+        <TextBox Name="IDC_TextBox" HorizontalAlignment="Left" Height="30" Margin="118,203,0,0" VerticalAlignment="Top" Width="155" FontFamily="Arial" FontSize="16" MaxLength="10" MaxLines="1" TabIndex="6"/>
+        <TextBox Name="Passport_TextBox" HorizontalAlignment="Left" Height="30" Margin="118,240,0,0" VerticalAlignment="Top" Width="155" FontFamily="Arial" FontSize="16" MaxLength="250" MaxLines="1" TabIndex="7" />
+
+
+        <Button Name="Cancel_Button" Content="Отмена" HorizontalAlignment="Left" Margin="198,282,0,0" VerticalAlignment="Top" Width="75" Height="22" Click="Cancel_Button_Click" FontFamily="Arial" FontSize="16" TabIndex="9"/>
+        <Button Name="Add_Button" Content="ОК" HorizontalAlignment="Left" Margin="118,282,0,0" VerticalAlignment="Top" Width="75" Height="22" Click="Add_Button_Click" FontFamily="Arial" FontSize="16" TabIndex="8"/>
+
+    </Grid>
+</Window>

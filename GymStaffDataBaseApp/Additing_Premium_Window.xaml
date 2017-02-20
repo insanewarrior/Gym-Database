@@ -1,0 +1,24 @@
+﻿<Window x:Class="GymStaffDataBaseApp.Additing_Premium_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Премия" Height="243" Width="318" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Closing="Additing_Premium_Window_Closing">
+    <Grid Name="Premium_Grid" Background="#FF1277B2">
+        <Label Content="Сотрудник" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="26,20,0,0" Width="93" FontFamily="Arial" FontSize="16" Height="30" Foreground="White"/>
+        <Label Content="Размер" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="26,55,0,0" Width="93" FontFamily="Arial" FontSize="16" Height="30" Foreground="White"/>
+        <Label Content="Причина" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="26,90,0,0" Width="93" FontFamily="Arial" FontSize="16" Height="30" Foreground="White"/>
+        <Label Content="Дата" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="26,125,0,0" Width="93" FontFamily="Arial" FontSize="16" Height="30" Foreground="White"/>
+
+        <DatePicker Name="Date_DatePicker" HorizontalAlignment="Left" Margin="136,125,0,0" DisplayDateStart="2016-01-01" DisplayDateEnd="2050-12-31" VerticalAlignment="Top" Height="30" Width="155" TabIndex="4"/>
+
+        <ComboBox Name="Employee_ComboBox" HorizontalAlignment="Left" Margin="136,20,0,0" VerticalAlignment="Top" Width="155" Height="30" FontFamily="Arial" FontSize="16" TabIndex="1" SelectionChanged="Employee_ComboBox_SelectionChanged"/>
+        <TextBox Name="Volume_TextBox" HorizontalAlignment="Left" Margin="136,55,0,0" VerticalAlignment="Top" Width="155" Height="30" FontFamily="Arial" FontSize="16" TabIndex="2"/>
+        <ComboBox Name="Reason_ComboBox" HorizontalAlignment="Left" Margin="136,90,0,0" VerticalAlignment="Top" Width="155" Height="30" FontFamily="Arial" FontSize="16" TabIndex="3">
+            <ComboBoxItem Content="Работа в выходной"/>
+            <ComboBoxItem Content="Сверхурочные часы"/>
+            <ComboBoxItem Content="Новаторство"/>
+        </ComboBox>
+
+        <Button Name="Add_Button" Content="ОК" HorizontalAlignment="Left" Margin="136,170,0,0" VerticalAlignment="Top" Width="75" Height="22" Click="Add_Button_Click" FontFamily="Arial" FontSize="16" TabIndex="5"/>
+        <Button Name="Cancel_Button" Content="Отмена" HorizontalAlignment="Left" Margin="216,170,0,0" VerticalAlignment="Top" Width="75" Height="22" Click="Cancel_Button_Click" FontFamily="Arial" FontSize="16" TabIndex="6"/>
+    </Grid>
+</Window>

@@ -1,0 +1,18 @@
+﻿<Window x:Class="GymStaffDataBaseApp.Additing_Post_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Должность" Height="207" Width="318" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Closing="Additing_Post_Window_Closing">
+    <Grid Name="Post_Grid" Background="#FFD3D316">
+        <Label Name="Duty_Label" Content="Обязанность" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="26,20,0,0" Width="123" FontFamily="Arial" FontSize="16" Height="30"/>
+        <Label Name="Salary_Label" Content="Зарплата" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="26,55,0,0" Width="123" FontFamily="Arial" FontSize="16" Height="30"/>
+        <Label Name="Work_Place_Label" Content="Рабочее место" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="26,90,0,0" Width="123" FontFamily="Arial" FontSize="16" Height="30"/>
+
+        <TextBox Name="Duty_TextBox" HorizontalAlignment="Left" Margin="154,20,0,0" VerticalAlignment="Top" Width="137" Height="30" FontFamily="Arial" FontSize="16" TabIndex="1"/>
+        <TextBox Name="Salary_TextBox" HorizontalAlignment="Left" Margin="154,55,0,0" VerticalAlignment="Top" Width="137" Height="30" FontFamily="Arial" FontSize="16" TabIndex="2"/>
+
+        <ComboBox Name="Work_Place_ComboBox" HorizontalAlignment="Left" Margin="154,90,0,0" VerticalAlignment="Top" Width="137" Height="30" FontFamily="Arial" FontSize="16" TabIndex="3"/>
+
+        <Button Name="Add_Button" Content="ОК" HorizontalAlignment="Left" Margin="136,136,0,0" VerticalAlignment="Top" Width="75" Height="22" Click="Add_Button_Click" FontFamily="Arial" FontSize="16" TabIndex="4"/>
+        <Button Name="Cancel_Button" Content="Отмена" HorizontalAlignment="Left" Margin="216,136,0,0" VerticalAlignment="Top" Width="75" Height="22" Click="Cancel_Button_Click" FontFamily="Arial" FontSize="16" TabIndex="5"/>
+    </Grid>
+</Window>
